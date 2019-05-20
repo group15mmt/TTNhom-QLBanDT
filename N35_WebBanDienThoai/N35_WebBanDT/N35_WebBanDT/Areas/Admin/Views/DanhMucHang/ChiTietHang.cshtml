@@ -1,0 +1,27 @@
+﻿@model N35_WebBanDT.Models.Entities.Hang
+
+@{
+    ViewBag.Title = "ChiTietHang";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h2>ChiTietHang</h2>
+
+<div>
+    <h4>Hang</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TenHang)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenHang)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IDHang }) |
+    @Html.ActionLink("Trở về danh sách các hãng", "DanhSachHang")
+</p>

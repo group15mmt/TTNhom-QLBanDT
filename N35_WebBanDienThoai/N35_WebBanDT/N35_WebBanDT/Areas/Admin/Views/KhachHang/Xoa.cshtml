@@ -1,0 +1,58 @@
+﻿@model N35_WebBanDT.Models.Entities.KhachHang
+
+@{
+    ViewBag.Title = "Xoa";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h2>Xoa</h2>
+
+<h3>Bạn có chắc chắn xóa không?</h3>
+<div>
+    <h4>KhachHang</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        
+        <dt>
+            @Html.DisplayNameFor(model => model.TenKhachHang)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenKhachHang)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GioiTinh_KH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GioiTinh_KH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SDT_KH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SDT_KH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DiaChi_KH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiaChi_KH)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Xóa" class="btn btn-default" /> |
+            @Html.ActionLink("Trở về danh sách khách hàng", "DanhSachKhachHang","KhachHang")
+        </div>
+    }
+</div>

@@ -1,0 +1,65 @@
+﻿@model N35_WebBanDT.Models.Entities.NhanVien
+
+@{
+    ViewBag.Title = "Xoa";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h2>Xoa</h2>
+
+<h3>Bạn có chắc chắn xóa không?</h3>
+<div>
+    <h4>NhanVien</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NguoiDung.MatKhau)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NguoiDung.MatKhau)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TenNhanVien)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenNhanVien)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GioiTinh_NV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GioiTinh_NV)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ChucVu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ChucVu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SDT_NV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SDT_NV)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Xóa" class="btn btn-default" /> |
+            @Html.ActionLink("Trở về danh sách nhân viên", "DanhSachNhanVien")
+        </div>
+    }
+</div>

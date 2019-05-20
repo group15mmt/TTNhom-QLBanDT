@@ -1,0 +1,52 @@
+﻿@model N35_WebBanDT.Models.Entities.KhachHang
+
+@{
+    ViewBag.Title = "ChiTietKhachHang";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h2>ChiTietKhachHang</h2>
+
+<div>
+    <h4>KhachHang</h4>
+    <hr />
+    <dl class="dl-horizontal">
+       
+        <dt>
+            @Html.DisplayNameFor(model => model.TenKhachHang)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenKhachHang)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GioiTinh_KH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GioiTinh_KH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SDT_KH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SDT_KH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DiaChi_KH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiaChi_KH)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IDKhachHang }) |
+    @Html.ActionLink("Trở về danh sách khách hàng", "DanhSachKhachHang ")
+</p>
